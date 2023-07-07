@@ -1,4 +1,4 @@
-package com.comunidadedevspace.taskbeats
+package com.comunidadedevspace.taskbeats.presentation
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,12 +7,14 @@ import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.comunidadedevspace.taskbeats.R
+import com.comunidadedevspace.taskbeats.data.Task
 
 //----------------------------------------------------------------------
 //                     estendendo pedindo por um view holder
 class TaskListAdapter(
 
-    private val openTaskDetailView : (task:Task)->Unit
+    private val openTaskDetailView : (task: Task)->Unit
     ) :
    ListAdapter<Task, TaskListViewHolder>(TaskListAdapter) {
 
