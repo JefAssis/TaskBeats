@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="cian_50">#e0f7f8</color>
+    <color name="cian_100">#b3eaec</color>
+    <color name="cian_200">#59A99C</color>
+    <color name="cian_300">#56ced5</color>
+    <color name="cian_500">#29b9c7</color>
+    <color name="cian_700">#24949c</color>
+    <color name="cian_900">#1c5d5c</color>
+    <color name="cian_800">#218185</color>
+    <color name="black">#FF000000</color>
+    <color name="dark_grey">#292929</color>
+    <color name="light_grey">#B1B1B1</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="violet_800">#c729ba</color>
+    <color name="orange_100">#ffcfd2</color>
+    <color name="orange_500">#f44f36</color>
+    <color name="orange_600">#e64636</color>
+    <color name="orange_700">#d43d30</color>
+    <color name="orange_800">#c73629</color>
+    <color name="orange_900">#b82d1d</color>
+
+</resources>

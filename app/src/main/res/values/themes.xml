@@ -1,0 +1,36 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.TaskBeats" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/cian_300</item>
+        <item name="colorPrimaryVariant">@color/cian_500</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/cian_700</item>
+        <item name="colorSecondaryVariant">@color/cian_900</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Title3" parent="Widget.AppCompat.TextView">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/cian_900</item>
+        <item name="android:textSize">18dp</item>
+        <item name="fontFamily">@font/dm_sans_bold</item>
+    </style>
+
+    <style name="Body1" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/cian_700</item>
+        <item name="fontFamily">@font/dm_sans_regular</item>
+        <item name="android:textSize">13dp</item>
+    </style>
+
+    <style name="ButtonPrimary" parent="Widget.AppCompat.Button">
+        <item name="fontFamily">@font/dm_sans_bold</item>
+        <item name="android:textColor">@color/cian_100</item>
+    </style>
+
+
+</resources>
