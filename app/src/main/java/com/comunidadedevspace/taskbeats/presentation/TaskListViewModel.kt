@@ -17,33 +17,32 @@ class TaskListViewModel(private val taskDao: TaskDao):ViewModel() {
 
     //                                          it comes from (bellow)
     val taskListLiveData: LiveData<List<Task>> = taskDao.getAll()
-
     fun execute(taskAction: TaskAction){
         when (taskAction.actionType) {
             ActionType.DELETE.name -> deleteAById(taskAction.task!!.id)
             ActionType.CREATE.name -> insertIntoDataBase(taskAction.task!!)
             ActionType.UPDATE.name -> updateIntoDataBase(taskAction.task!!)
-            ActionType.DELETE_ALL.name -> updateIntoDataBase(taskAction.task!!)
+            ActionType.DELETE_ALL.name -> deleteAll()
         }
     }
     private fun deleteAById(id: Int) {
-        viewModelScope.launch{
+        viewModelScope.launch(Dispatchers.IO){
             taskDao.deleteById(id)
         }
     }
 
     private fun insertIntoDataBase(task: Task) {
-        viewModelScope.launch{
+        viewModelScope.launch(Dispatchers.IO){
             taskDao.insert(task)
         }
     }
     private fun updateIntoDataBase(task: Task) {
-        viewModelScope.launch{
+        viewModelScope.launch(Dispatchers.IO){
             taskDao.update(task)
         }
     }
     private fun deleteAll() {
-        viewModelScope.launch{
+        viewModelScope.launch(Dispatchers.IO){
             taskDao.deleteAll()
         }
     }

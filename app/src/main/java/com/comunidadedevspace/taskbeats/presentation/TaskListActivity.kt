@@ -14,14 +14,9 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.RecyclerView
 import com.comunidadedevspace.taskbeats.R
-import com.comunidadedevspace.taskbeats.TaskBeatsApplication
-import com.comunidadedevspace.taskbeats.data.AppDataBase
 import com.comunidadedevspace.taskbeats.data.Task
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers.IO
-import kotlinx.coroutines.launch
 import java.io.Serializable
 
 //a class that extend another class
@@ -83,12 +78,19 @@ class MainActivity : AppCompatActivity() {
     private fun listFromDataBase() {
 
         val listObserver = Observer<List<Task>> { listTasks ->
+            if (listTasks.isEmpty()){
+                ctnContent.visibility = View.VISIBLE
+            }else{
+                ctnContent.visibility = View.GONE
+
+            }
             adapter.submitList(listTasks)
         }
 
         //LiveData
         viewModel.taskListLiveData.observe(this@MainActivity, listObserver)
-//            val myDataBaseList: List<Task> = dao.getAll()
+//
+    //            val myDataBaseList: List<Task> = dao.getAll()
 //            adapter.submitList(myDataBaseList)
 
     }

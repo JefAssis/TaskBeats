@@ -21,10 +21,10 @@ interface TaskDao {
     @Update(onConflict = OnConflictStrategy.REPLACE)
     fun update(task: Task)
     //Delete - to delete we got to find the task by an ID
-
+    @Query("Delete from task")
+    fun deleteAll()
     @Query("Delete from task WHERE id =:id")
     fun deleteById(id:Int)
 
-    @Query("Delete from task")
-    fun deleteAll()
+
 }
