@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.comunidadedevspace.taskbeats.R
-import com.comunidadedevspace.taskbeats.data.Task
+import com.comunidadedevspace.taskbeats.data.local.Task
 
 //----------------------------------------------------------------------
 //                     estendendo pedindo por um view holder
@@ -29,6 +29,7 @@ class TaskListAdapter(
         val task = getItem(position)
         holder.bind(task,openTaskDetailView)
     }
+
     companion object: DiffUtil.ItemCallback<Task>() {
 
         override fun areItemsTheSame(oldItem: Task, newItem: Task): Boolean {

@@ -10,6 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/Title3"
+        android:textColor="@color/cian_50"
         android:text="Task Beats"/>
 
 

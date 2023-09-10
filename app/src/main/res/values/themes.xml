@@ -32,5 +32,15 @@
         <item name="android:textColor">@color/cian_100</item>
     </style>
 
+<style name="RoundButton" parent="Widget.AppCompat.Button">
+    <item name="background">@drawable/round_style</item>
+    <item name="android:layout_width">200dp</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="fontFamily">@font/dm_sans_bold</item>
+    <item name="backgroundTint">@color/cian_100</item>
+    <item name="android:textColor">@color/cian_900</item>
+    <item name="textInputStyle">@font/dm_sans_bold</item>
 
+
+</style>
 </resources>

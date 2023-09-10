@@ -1,4 +1,4 @@
-package com.comunidadedevspace.taskbeats.data
+package com.comunidadedevspace.taskbeats.data.local
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
@@ -11,7 +11,7 @@ import androidx.room.Update
 interface TaskDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insert (task: Task)
+    suspend fun insert (task: Task)
 
     @Query("Select * from task")
     fun getAll():LiveData<List<Task>>
@@ -19,12 +19,13 @@ interface TaskDao {
     //Update - encontrar a tarefa que queremos mudar
 
     @Update(onConflict = OnConflictStrategy.REPLACE)
-    fun update(task: Task)
+    suspend fun update(task: Task)
     //Delete - to delete we got to find the task by an ID
-    @Query("Delete from task")
-    fun deleteAll()
-    @Query("Delete from task WHERE id =:id")
-    fun deleteById(id:Int)
+    @Query("DELETE from task")
+    suspend fun deleteAll()
+
+    @Query("DELETE from task WHERE id =:id")
+    suspend fun deleteById(id: Int)
 
 
 }
